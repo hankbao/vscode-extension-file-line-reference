@@ -9,7 +9,7 @@ When taking the CS5010 Program Design Paradigms, referencing line numbers and th
 
 ## Limitations
 
-1. Currently, copy function name only works for Java code.
+1. Copying function name only works for Java currently.
 
 ## License
 
