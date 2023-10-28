@@ -1,0 +1,81 @@
+{
+  "name": "file-line-reference",
+  "displayName": "File Line Reference",
+  "description": "This extension helps you get a reference to lines and possibly a function name within a file.",
+  "version": "1.0.0",
+  "publisher": "hankbao",
+  "icon": "icon.png",
+  "extensionKind": [
+    "workspace"
+  ],
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "keywords": [
+    "copy",
+    "file name",
+    "line number",
+    "function name",
+    "clipboard"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "file-line-reference.copy-file-line",
+        "title": "Copy File Name and Line Numbers"
+      },
+      {
+        "command": "file-line-reference.copy-file-line-function",
+        "title": "Copy File Name and Line Numbers with Function Name"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "file-line-reference.copy-file-line",
+        "key": "alt+y",
+        "mac": "ctrl+y",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "file-line-reference.copy-file-line-function",
+        "key": "alt+u",
+        "mac": "ctrl+u",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "file-line-reference.copy-file-line"
+        },
+        {
+          "command": "file-line-reference.copy-file-line-function"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
