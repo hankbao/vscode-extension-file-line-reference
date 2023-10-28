@@ -4,6 +4,10 @@
   "description": "This extension helps you get a reference to lines and possibly a function name within a file.",
   "version": "1.0.0",
   "publisher": "hankbao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hankbao/vscode-extension-file-line-reference"
+  },
   "icon": "icon.png",
   "extensionKind": [
     "workspace"
