@@ -2,7 +2,7 @@
   "name": "file-line-reference",
   "displayName": "File Line Reference",
   "description": "A VSCode extension provides a reference to lines and, if applicable, a function name within a file.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "hankbao",
   "repository": {
     "type": "git",
