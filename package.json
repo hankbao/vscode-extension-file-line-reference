@@ -2,7 +2,7 @@
   "name": "file-line-reference",
   "displayName": "File Line Reference",
   "description": "This extension helps you get a reference to lines and possibly a function name within a file.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "hankbao",
   "repository": {
     "type": "git",
