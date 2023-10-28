@@ -37,6 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (guessFunctionName) {
             let lines = editor.document.getText(editor.selection).split('\n');
             for (const line of lines) {
+                // TODO: This regex only works for Java currently
                 let regex = /\s*\b(?:public|private)?\s*(?:static)?\s*\w+\s+(\w+)\s*\(/g;
                 let match = regex.exec(line);
                 if (match) {
