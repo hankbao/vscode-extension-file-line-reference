@@ -29,7 +29,11 @@ export function activate(context: vscode.ExtensionContext) {
         } else {
             let start = editor.selection.start.line + 1;
             let end = editor.selection.end.line + 1;
-            lineNumber += start + '-' + end;
+            if (start === end) {
+                lineNumber += start;
+            } else {
+                lineNumber += start + '-' + end;
+            }
         }
 
         output += ':' + lineNumber;
